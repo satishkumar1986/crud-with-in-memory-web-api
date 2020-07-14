@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col-12 text-center">
+            <h2>Book List</h2>
+        </div>
+
+        <div class="col-12 text-right mb-4"><a class="btn btn-dark" routerLink="add-book">Add New</a></div>
+        <div class="col-12">
+            <table class="table">
+                <tr>
+                    <th>Id</th>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Category</th>
+                    <th class="text-center">Year</th>
+                    <th class="text-right">Action</th>
+                </tr>               
+                <tr *ngFor="let data of allBook">
+                    <td>{{data.id}}</td>
+                    <td class="text-center">{{data.name}}</td>
+                    <td class="text-center">{{data.category}}</td>
+                    <td class="text-center">{{data.year}}</td>
+                    <td class="text-right">
+                        <a [routerLink]="['edit-book', data.id]" class="btn btn-warning">Update Book</a>
+                        <button class="btn btn-danger" (click)="deleteBook(data.id)">Delete</button></td>
+                </tr>                      
+            </table>
+        </div>
+
+</div>
+
+</div>

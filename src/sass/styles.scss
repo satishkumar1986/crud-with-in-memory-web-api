@@ -1,0 +1,19 @@
+@import 'variable.scss';
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+button, input{
+    &:focus{
+        outline:none;
+    }
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: 0 2px 1px -1px rgb(255, 2, 2,1), 
+                0 1px 1px 0 rgba(255, 2, 2,1), 
+                0 1px 3px 0 rgba(255, 2, 2,1);
+}
+
+.active{
+    background: red;
+}
